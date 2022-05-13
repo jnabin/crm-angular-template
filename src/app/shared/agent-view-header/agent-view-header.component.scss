@@ -1,0 +1,68 @@
+.header-nav{
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 22px 25px;
+
+  strong{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.0224em;
+    color: #222831;
+    margin-bottom: 5px;
+  }
+
+  .unavailable{
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    color: #BE1931;
+    letter-spacing: -0.01644em;
+  }
+
+  .signal-detrails{
+    .number{
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.0164em;
+      text-transform: capitalize;
+      font-feature-settings: 'ss02' on, 'salt' on;
+      color: #5E81F4;
+    }
+
+    span{
+      padding-right: 10px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      align-items: center;
+      letter-spacing: 0.0164em;
+      text-transform: capitalize;
+      font-feature-settings: 'ss02' on, 'salt' on;
+      color: #5E81F4;
+    }
+  }
+
+  .call-feature{
+    width: 512px;
+    .feature-item{
+      p{
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 19px;
+        align-items: center;
+        letter-spacing: 0.0164em;
+        text-transform: capitalize;
+        font-feature-settings: 'ss02' on, 'salt' on;
+        color: #5E81F4;
+      }
+    }
+  }
+}
+
+
+
+
