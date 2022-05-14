@@ -12,7 +12,8 @@ import { AgentViewHeaderComponent } from './agent-view-header/agent-view-header.
     CommonModule
   ],
   exports: [
-    AgentViewHeaderComponent
+    AgentViewHeaderComponent,
+    CommonModule
   ]
 })
 export class SharedModule { }

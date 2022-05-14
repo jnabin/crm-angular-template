@@ -1,0 +1,64 @@
+<div class="d-flex justify-content-between">
+  <div class="dropdown">
+    <button mat-button [matMenuTriggerFor]="menu">{{seletedMenu}} <img src="/assets/images/arrow-down.svg" alt="" srcset=""></button>
+    <mat-menu #menu="matMenu">
+      <button *ngFor="let item of persons" (click) = "seletedMenu = item" mat-menu-item>{{item}}</button>
+    </mat-menu>
+  </div>
+  <div class="desc d-flex justify-content-between">
+    <div>
+      <p><small>Gender</small></p>
+      <p><strong>Male</strong></p>
+    </div>
+    <div>
+      <p><small>Language</small></p>
+      <p><strong>English</strong></p>
+    </div>
+    <div>
+      <p><small>Nationality</small></p>
+      <p><strong>Canada</strong></p>
+    </div>
+    <div>
+      <p><small>Address</small></p>
+      <p><strong>21 Laval Rd.</strong></p>
+    </div>
+  </div>
+</div>
+<div class="tab mt-4">
+  <mat-tab-group>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <img src="/assets/images/user.svg" alt="" srcset="">
+        PROFILE
+      </ng-template>
+      <app-profile-information></app-profile-information>
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <img src="/assets/images/history.svg" alt="" srcset="">
+        History
+      </ng-template>
+      Content 2
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <img src="/assets/images/message.svg" alt="" srcset="">
+        Message
+      </ng-template>
+
+      Content 3
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <img src="/assets/images/script.svg" alt="" srcset="">
+        Script
+      </ng-template>
+
+      Content 3
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
