@@ -1,0 +1,17 @@
+<ng-container *ngIf="checked">
+  <div (click) = "checked = !checked" class="color-box-item">
+    <div [class]="className">
+      <span>Lable</span>
+    </div>
+    <img class="success" src="/assets/images/success-gray.svg" alt="" srcset="">
+  </div>
+</ng-container>
+
+<ng-container *ngIf="!checked">
+  <div (click) = "checked = !checked" class="color-box-item">
+    <div [class]="className+' defultShadow'">
+      <span>Lable</span>
+    </div>
+  </div>
+</ng-container>
+

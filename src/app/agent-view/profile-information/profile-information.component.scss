@@ -63,19 +63,39 @@
 .color-box{
   margin-top: 8px;
   .box{
-    border: 1px dashed #ECECF2;
-    border-top: 8px solid #ECECF2;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.12);
-
     .label{
       font-weight: 700;
       font-size: 16px;
       line-height: 19px;
       color: #1C1D21;
     }
+
+    .colors{
+      margin-top: 23px;
+    }
   }
+  .tags{
+    margin-top: 25px;
+    button{
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      color: #1B51E5;
+      background: linear-gradient(0deg, rgba(94, 129, 244, 0.25), rgba(94, 129, 244, 0.25)), #FFFFFF;
+      border-radius: 8px;
+      padding: 10px 22px;
+    }
+  }
+}
+
+.common-border{
+  max-width: 420px;
+  border: 1px dashed #ECECF2;
+  border-top: 8px solid #ECECF2;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.12);
 }
 
 

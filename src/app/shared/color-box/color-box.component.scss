@@ -1,0 +1,104 @@
+.color-box-item{
+  cursor: pointer;
+  position: relative;
+  div{
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    span{
+      line-height: 60px;
+      color: white;
+      font-size: 12.1926px;
+      font-weight: 700;
+    }
+  }
+  .success{
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  }
+}
+
+.green{
+  background-color: #7CE7AC;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #7CE7AC, inset 0 0 0 5px white;
+}
+
+.pink{
+  background-color: #FF808B;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #FF808B, inset 0 0 0 5px white;
+}
+
+.yellow{
+  background-color: #F4BE5E;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #F4BE5E, inset 0 0 0 5px white;
+}
+
+.sky-blue{
+  background-color: #4FD1D9;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #4FD1D9, inset 0 0 0 5px white;
+}
+
+.light-green{
+  background-color: #4AAC1C;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #4AAC1C, inset 0 0 0 5px white;
+}
+
+.light-purple{
+  background-color: #5E81F4;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #5E81F4, inset 0 0 0 5px white;
+}
+
+.deep-purple{
+  background-color: #59287A;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #59287A, inset 0 0 0 5px white;
+}
+
+.deep-gray{
+  background-color: #A0616A;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #A0616A, inset 0 0 0 5px white;
+}
+
+.light-gray{
+  background-color: #868E96;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #868E96, inset 0 0 0 5px white;
+}
+
+.semi-blue{
+  background-color: #162D77;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #162D77, inset 0 0 0 5px white;
+}
+
+.semi-yellow{
+  background-color: #D9D466;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #D9D466, inset 0 0 0 5px white;
+}
+
+.deep-blue{
+  background-color: #0F2ED0;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #0F2ED0, inset 0 0 0 5px white;
+}
+
+.orange{
+  background-color: #E48227;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #E48227, inset 0 0 0 5px white;
+}
+
+.purple{
+  background-color: #A952C8;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #A952C8, inset 0 0 0 5px white;
+}
+
+.dark{
+  background-color: #23361A;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #23361A, inset 0 0 0 5px white;
+}
+
+
+.defultShadow{
+  opacity: 0.5;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
