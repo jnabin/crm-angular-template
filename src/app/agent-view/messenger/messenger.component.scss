@@ -1,5 +1,98 @@
 .messenger{
-  background: #F5F5FA;
-  height: 657px;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+
+  .body{
+    padding: 30px 20px;
+    flex-basis: 657px;
+    gap: 8px;
+    overflow-y: auto;
+    background: #F5F5FA;
+    display: flex;
+    flex-direction: column;
+
+    .message{
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      .time{
+        margin: 5px 0px;
+        padding-left: 32px;
+        font-size: 12px;
+        line-height: 18px;
+        color: #8181A5;
+      }
+      .message-content{
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+
+        .image{
+          width: 24px !important;
+        }
+        .content{
+          white-space: pre-line;
+          width: calc(100% - 24px);
+          flex-wrap: 1;
+          padding: 10px 15px;
+          font-size: 14px;
+          line-height: 21px;
+          color: #1C1D21;
+          background-color: white;
+          border-radius: 18.5px 18.5px 18.5px 0px;
+        }
+      }
+      &.me{
+        .time{
+          padding-right: 32px;
+        }
+        align-items: flex-end;
+        .message-content{
+          .image{
+            order: 2;
+          }
+          .content{
+            color: white;
+            border-radius: 17px 17px 0px 17px;
+            background: #5E81F4;
+          }
+        }
+      }
+    }
+  }
+
+  .footer{
+    display: flex;
+    margin: 20px 15px;
+    flex-basis: 74px;
+    background: #F5F5FA;
+    border-radius: 12px;
+    padding: 15px 10px;
+    gap: 5px;
+
+    textarea{
+      resize: none;
+      height: 100%;
+      width: 100%;
+      border: none;
+      outline: none;
+      background: #F5F5FA;
+      font-size: 14px;
+      line-height: 17px;
+      color: #8181A5;
+      font-weight: 700;
+    }
+
+    .send-option{
+      width: 75px;
+      button{
+        border: none;
+        padding: 0 2px;
+      }
+    }
+
+    .inputBox{
+      flex-grow: 1;
+    }
+  }
 }

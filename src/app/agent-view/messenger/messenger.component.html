@@ -1,3 +1,33 @@
 <div class="messenger">
-  <p>messenger works!</p>
+  <div class="body">
+    <div class="message" [ngClass]="{me : message.me}" *ngFor="let message of messages; let i = index">
+      <div class="message-content">
+        <div class="image align-self-center">
+          <img [src]="getProfilePhoto(message.me)" alt="" srcset="">
+        </div>
+        <div class="content">
+          {{message.body}}
+        </div>
+      </div>
+      <div class="time" [hidden] = "i < messages.length-1 && message.me == messages[i+1].me && message.time == messages[i+1].time">
+        {{message.time}}
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="inputBox">
+      <textarea id="textarea1" [(ngModel)]="messageContent" (keydown)="triggerFunction($event)"></textarea>
+    </div>
+    <div class="send-option align-self-center">
+      <button class="pl-0">
+        <img src="/assets/images/smile.svg" alt="" srcset="">
+      </button>
+      <button>
+        <img src="/assets/images/file.svg" alt="" srcset="">
+      </button>
+      <button class="pr-0" (click)="sendMessage()">
+        <img src="/assets/images/send-btn.svg" alt="" srcset="">
+      </button>
+    </div>
+  </div>
 </div>
