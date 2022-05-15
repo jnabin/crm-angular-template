@@ -7,6 +7,7 @@
         </div>
         <div class="content">
           {{message.body}}
+          <img *ngIf="message.image" [src]="message.image" alt="" srcset="">
         </div>
       </div>
       <div class="time" [hidden] = "i < messages.length-1 && message.me == messages[i+1].me && message.time == messages[i+1].time">
@@ -15,6 +16,8 @@
     </div>
   </div>
   <div class="footer">
+    <input type="file" class="d-none" accept="image/*" #fileInput
+        (change)="fileSelect($event)" />
     <emoji-mart
       (emojiClick)="addEmoji($event)"
       *ngIf="toggleEmojiPicker"
@@ -30,7 +33,7 @@
       <button class="pl-0">
         <img (click)="toggleEmojiPicker = !toggleEmojiPicker" src="/assets/images/smile.svg" alt="" srcset="">
       </button>
-      <button>
+      <button (click)="fileInput.click()">
         <img src="/assets/images/file.svg" alt="" srcset="">
       </button>
       <button class="pr-0" (click)="sendMessage()">
