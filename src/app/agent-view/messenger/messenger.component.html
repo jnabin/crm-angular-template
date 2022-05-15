@@ -34,7 +34,7 @@
         <img (click)="toggleEmojiPicker = !toggleEmojiPicker" src="/assets/images/smile.svg" alt="" srcset="">
       </button>
       <button (click)="fileInput.click()">
-        <img src="/assets/images/file.svg" alt="" srcset="">
+        <img (click)="toggleEmojiPicker = false" src="/assets/images/file.svg" alt="" srcset="">
       </button>
       <button class="pr-0" (click)="sendMessage()">
         <img src="/assets/images/send-btn.svg" alt="" srcset="">

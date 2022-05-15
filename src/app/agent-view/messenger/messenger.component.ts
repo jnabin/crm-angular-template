@@ -70,12 +70,15 @@ export class MessengerComponent implements OnInit {
   }
 
   fileSelect(event: any) {
+    this.toggleEmojiPicker = false;
+    if(!event.target.files[0] || event.target.files[0].length == 0) {
+			return;
+		}
     var reader = new FileReader();
 		reader.readAsDataURL(event.target.files[0]);
 
 		reader.onload = (_event) => {
 			this.imageUrl = reader.result;
-      console.log(this.imageUrl);
       this.sendMessage();
 		}
   }
