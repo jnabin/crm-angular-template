@@ -62,6 +62,7 @@
   }
 
   .footer{
+    position: relative;
     display: flex;
     margin: 20px 15px;
     flex-basis: 74px;
@@ -95,4 +96,10 @@
       flex-grow: 1;
     }
   }
+}
+
+.emoji{
+  position:absolute;
+  bottom: 65px;
+  left: 0;
 }

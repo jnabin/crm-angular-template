@@ -15,6 +15,7 @@ interface Message {
 })
 export class MessengerComponent implements OnInit {
   messageContent: string = '';
+  toggleEmojiPicker: boolean = false;
   messages: Message[] = [
     {id: 1, body: 'Ever wondered how some graphic', time: '8.00 PM', me: false},
     {id: 2, body: 'Freelance Design Tricks', time: '8.20 PM', me: true},
@@ -33,13 +34,18 @@ export class MessengerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getCurrentTime(): string {
+    let time = new Date();
+    return time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+  }
   sendMessage() {
+    this.toggleEmojiPicker = false;
     if(this.messageContent.length == 0){
       return;
     }
     let lastMessageId = Math.max(...this.messages.map(x => x.id));
     this.messages.push(
-      {id: lastMessageId++, body: this.messageContent??'', time: '4.00 PM', me: true }
+      {id: lastMessageId++, body: this.messageContent??'', time: this.getCurrentTime(), me: true }
     );
     this.messageContent = '';
   }
@@ -51,8 +57,13 @@ export class MessengerComponent implements OnInit {
       text.value += '\n';
       this.messageContent += '\n';
     } else if (event.key === 'Enter') {
+      event.preventDefault();
       this.sendMessage();
     }
+  }
+
+  addEmoji(event: any) {
+    this.messageContent += event.emoji.native;
   }
 
 }
