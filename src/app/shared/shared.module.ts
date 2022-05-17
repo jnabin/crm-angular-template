@@ -5,19 +5,24 @@ import { ColorBoxComponent } from './color-box/color-box.component';
 import { FormsModule } from '@angular/forms';
 import { PickerModule } from '@ctrl/ngx-emoji-mart';
 import { ScriptUserDropdownComponent } from './script-user-dropdown/script-user-dropdown.component';
-
+import { CampaignViewHeaderComponent } from './campaign-view-header/campaign-view-header.component';
+import { MatButtonModule } from '@angular/material/button';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
   declarations: [
     AgentViewHeaderComponent,
     ColorBoxComponent,
-    ScriptUserDropdownComponent
+    ScriptUserDropdownComponent,
+    CampaignViewHeaderComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    PickerModule
+    PickerModule,
+    MatButtonModule,
+    NgbModule
   ],
   exports: [
     AgentViewHeaderComponent,
@@ -25,7 +30,9 @@ import { ScriptUserDropdownComponent } from './script-user-dropdown/script-user-
     FormsModule,
     ColorBoxComponent,
     PickerModule,
-    ScriptUserDropdownComponent
+    ScriptUserDropdownComponent,
+    CampaignViewHeaderComponent,
+    NgbModule
   ]
 })
 export class SharedModule { }

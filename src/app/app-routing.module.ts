@@ -8,6 +8,10 @@ const routes: Routes = [
     loadChildren: () => import('./agent-view/agent-view.module').then(m => m.AgentViewModule)
   },
   {
+    path: 'campaign',
+    loadChildren: () => import('./campaign/campaign.module').then(m => m.CampaignModule)
+  },
+  {
     path: '',
     redirectTo: 'agent-view',
     pathMatch: 'full'
