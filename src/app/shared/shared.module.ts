@@ -4,13 +4,15 @@ import { AgentViewHeaderComponent } from './agent-view-header/agent-view-header.
 import { ColorBoxComponent } from './color-box/color-box.component';
 import { FormsModule } from '@angular/forms';
 import { PickerModule } from '@ctrl/ngx-emoji-mart';
+import { ScriptUserDropdownComponent } from './script-user-dropdown/script-user-dropdown.component';
 
 
 
 @NgModule({
   declarations: [
     AgentViewHeaderComponent,
-    ColorBoxComponent
+    ColorBoxComponent,
+    ScriptUserDropdownComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { PickerModule } from '@ctrl/ngx-emoji-mart';
     CommonModule,
     FormsModule,
     ColorBoxComponent,
-    PickerModule
+    PickerModule,
+    ScriptUserDropdownComponent
   ]
 })
 export class SharedModule { }

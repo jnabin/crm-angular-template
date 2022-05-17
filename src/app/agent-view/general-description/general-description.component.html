@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-between flex-wrap">
+<div *ngIf="!script" class="d-flex justify-content-between flex-wrap">
   <div class="mr-2">
     <img src="/assets/images/back.svg" alt="" srcset="">
   </div>
@@ -27,8 +27,17 @@
     </div>
   </div>
 </div>
+<div *ngIf="script" class="script-header">
+  <div>
+    <strong>(702) 555-0122</strong>
+  </div>
+  <div class="mt-2">
+    <p>843 Don Mills Rd Forest hill, North Side
+      Second line</p>
+  </div>
+</div>
 <div class="tab mt-4">
-  <mat-tab-group>
+  <mat-tab-group (selectedTabChange)="scriptToggle($event)">
     <mat-tab>
       <ng-template mat-tab-label>
         <img src="/assets/images/user.svg" alt="" srcset="">
@@ -60,7 +69,7 @@
         Script
       </ng-template>
 
-      Content 3
+      <app-script [scriptPerson] ="persons"></app-script>
     </mat-tab>
   </mat-tab-group>
 </div>

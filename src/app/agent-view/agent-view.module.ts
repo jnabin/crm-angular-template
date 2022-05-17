@@ -1,3 +1,5 @@
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { SharedModule } from './../shared/shared.module';
@@ -10,6 +12,7 @@ import { ChatComponent } from './chat/chat.component';
 import {MatIconModule} from '@angular/material/icon';
 import { ProfileInformationComponent } from './profile-information/profile-information.component';
 import { MessengerComponent } from './messenger/messenger.component';
+import { ScriptComponent } from './script/script.component';
 
 
 @NgModule({
@@ -18,7 +21,8 @@ import { MessengerComponent } from './messenger/messenger.component';
     GeneralDescriptionComponent,
     ChatComponent,
     ProfileInformationComponent,
-    MessengerComponent
+    MessengerComponent,
+    ScriptComponent
   ],
   imports: [
     SharedModule,
@@ -26,7 +30,9 @@ import { MessengerComponent } from './messenger/messenger.component';
     MatMenuModule,
     MatButtonModule,
     MatTabsModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule,
+    MatFormFieldModule
   ]
 })
 export class AgentViewModule { }

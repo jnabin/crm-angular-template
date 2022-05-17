@@ -35,3 +35,22 @@
     padding-right: 15px;
   }
 }
+
+.script-header{
+  strong{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.0224em;
+    text-transform: capitalize;
+    color: #222831;
+  }
+  p{
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.0164em;
+    text-transform: uppercase;
+    color: #949CA9;
+    max-width: 242px;
+  }
+}

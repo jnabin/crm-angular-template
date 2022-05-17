@@ -1,0 +1,18 @@
+<p *ngIf="notExpand" class="dropdown" (click)="notExpand = !notExpand">
+  <img *ngIf="selectedValue == 'Yes'" class="mr-3" src="/assets/images/yes.svg" alt="" srcset="">
+  <img *ngIf="selectedValue == 'No'" class="mr-3" src="/assets/images/no.svg" alt="" srcset="">
+  <span class="mr-3">{{selectedValue}}</span>
+  <img src="/assets/images/drop.svg" alt="" srcset="">
+</p>
+<div *ngIf="!notExpand" (click)="notExpand = !notExpand" class="drop-expand">
+    <p (click)="selectedValue = 'Yes'" [ngClass]="{'order': selectedValue == 'No'}">
+      <img class="mr-3" src="/assets/images/yes.svg" alt="" srcset="">
+      <span class="mr-3">Yes</span>
+      <img *ngIf="selectedValue == 'Yes'" src="/assets/images/drop.svg" alt="" srcset="">
+    </p>
+    <p (click)="selectedValue = 'No'" [ngClass]="{'order': selectedValue == 'Yes'}">
+      <img class="mr-3" src="/assets/images/no.svg" alt="" srcset="">
+      <span class="mr-3 pl-1">No </span>
+      <img *ngIf="selectedValue == 'No'" src="/assets/images/drop.svg" alt="" srcset="">
+    </p>
+</div>

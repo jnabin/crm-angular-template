@@ -1,0 +1,84 @@
+.script-content{
+  margin-top: 25px;
+
+  .first-section{
+    p{
+      font-size: 14px;
+      line-height: 25px;
+      letter-spacing: 0.03em;
+      color: #000000;
+
+      span{
+        color: #5E81F4;
+      }
+    }
+  }
+}
+
+.user-section{
+  .script-item{
+    min-height: 92px;
+    border: 1px solid #ECECF2;
+    padding: 0 25px;
+    .item{
+      gap: 15px;
+      strong{
+        font-size: 14px;
+        line-height: 21px;
+        color: #1C1D21;
+        font-weight: 700;
+      }
+      .number{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 8px;
+        line-height: 14px;
+        text-align: center;
+        color: #F5F5FA;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #5E81F4;
+      }
+    }
+  }
+  .script-item:hover{
+    background: rgba(94, 129, 244, 0.1);
+  }
+}
+
+.available{
+  gap: 17px;
+  flex-basis: 175px;
+  div{
+    p{
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 21px;
+      color: #1C1D21;
+    }
+
+    .dropdown{
+      cursor: pointer;
+    }
+
+    .drop-expand{
+      position: absolute;
+      top: 0;
+      background: #FEFEFE;
+      box-shadow: 0px 10px 12px -6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+
+      p{
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .option{
+    flex-basis: 90px;
+    min-height: 31px;
+  }
+}

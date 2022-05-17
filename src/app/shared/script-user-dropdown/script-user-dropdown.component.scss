@@ -1,0 +1,31 @@
+p{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 90px;
+  color: #1C1D21;
+}
+
+.dropdown{
+  cursor: pointer;
+}
+
+.drop-expand{
+  position: absolute;
+  padding: 5px;
+  top: 0;
+  background: #FEFEFE;
+  box-shadow: 0px 10px 12px -6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+
+  .order{
+    order: 1;
+  }
+
+  p{
+    margin-bottom: 10px;
+    line-height: 21px;
+    cursor: pointer;
+  }
+}
