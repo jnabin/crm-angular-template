@@ -1,26 +1,34 @@
 <div class="container">
   <div class="header-nav d-flex flex-wrap justify-content-between">
     <div class="profile d-flex pb-2 pb-lg-0">
-      <div class="align-self-center mr-2">
-        <img src="/assets/images/unavailable-profile.svg" alt="" srcset="">
+      <div class="align-self-center mr-2 position-relative">
+        <img class="profile-img" src="/assets/images/userProfile.svg" alt="" srcset="">
+        <img *ngIf="!isActive" class="abs-img" src="/assets/images/not-active.svg" alt="" srcset="">
+        <img *ngIf="isActive" class="abs-img" src="/assets/images/active.svg" alt="" srcset="">
       </div>
       <div class="align-self-center">
         <p class="mb-0">
-          <strong>Arun Dhungel</strong>
+          <strong style="white-space: nowrap;">Arun Dhungel</strong>
         </p>
-        <p class="mb-0 unavailable">Unavailable</p>
+        <p *ngIf="!isActive" class="mb-0 unavailable">Unavailable</p>
+        <p *ngIf="isActive" class="mb-0 ready">Ready</p>
       </div>
+    </div>
+    <div *ngIf="isActive" class="align-self-center active-progress">
+      <p>Active Session</p>
+      <div class="line"></div>
+      <p class="time">05:03:45 </p>
     </div>
     <div class="contact-number align-self-center">
       <p class="signal-detrails">
         <span><img src="/assets/images/signal.svg" alt="" srcset=""></span>
         <span class="number">(702) 555-0122</span>
-        <span class="number">.</span>
-        <span>Live call: 0:34</span>
+        <span *ngIf="!isActive" class="number">.</span>
+        <span [ngClass]="{'active-call':isActive}">Live call: 0:34</span>
       </p>
     </div>
-    <div class="call-feature d-flex justify-content-between">
-      <div class="feature-item">
+    <div class="call-feature active-call-feature d-flex justify-content-between">
+      <div *ngIf="!isActive" class="feature-item">
         <img src="/assets/images/hold.svg" alt="" srcset="">
         <p class="mb-0 text-center">Hold</p>
       </div>

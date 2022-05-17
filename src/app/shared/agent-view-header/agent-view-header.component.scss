@@ -3,6 +3,16 @@
   border-radius: 24px;
   padding: 22px 25px;
 
+  .profile-img{
+    border-bottom-right-radius: 10px;
+  }
+
+  .abs-img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
   strong{
     font-weight: 700;
     font-size: 18px;
@@ -20,6 +30,46 @@
     line-height: 16px;
     color: #BE1931;
     letter-spacing: -0.01644em;
+  }
+
+  .ready{
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.0164em;
+    color: #27AE60;
+    font-weight: 700;
+  }
+
+  .active-progress{
+    background: rgba(94, 129, 244, 0.15);
+    border-radius: 12px;
+    padding: 15px;
+    p{
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.0164em;
+      text-transform: capitalize;
+      font-feature-settings: 'ss02' on, 'salt' on;
+      color: #5E81F4;
+      text-align: center;
+    }
+
+    .time{
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      letter-spacing: 0.0164em;
+      text-transform: capitalize;
+      color: #5E81F4;
+    }
+
+    .line{
+      width: 57px;
+      height: 1px;
+      background-color: white;
+      margin: 8px auto;
+    }
   }
 
   .signal-detrails{
@@ -43,6 +93,11 @@
       text-transform: capitalize;
       font-feature-settings: 'ss02' on, 'salt' on;
       color: #5E81F4;
+
+      &.active-call{
+        display: block;
+        text-align: center;
+      }
     }
   }
 
@@ -59,6 +114,10 @@
         font-feature-settings: 'ss02' on, 'salt' on;
         color: #5E81F4;
       }
+    }
+
+    &.active-call-feature{
+      width: 442px;
     }
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-agent-view-header',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./agent-view-header.component.scss']
 })
 export class AgentViewHeaderComponent implements OnInit {
+  @Input() isActive: boolean = true;
 
   constructor() { }
 
