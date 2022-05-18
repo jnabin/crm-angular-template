@@ -1,6 +1,10 @@
 <div class="footer">
-  <button mat-button>
-    <span>...</span>
+  <button mat-button (click)="connect()">
+    <span [ngClass]="{'animation':loading}">
+      <span class="dot-pulse"></span>
+      <span class="dot-pulse"></span>
+      <span class="dot-pulse mr-3"></span>
+    </span>
     Connect yourself
   </button>
 </div>
