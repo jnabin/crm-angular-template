@@ -12,6 +12,21 @@ img{
   max-width: 100%;
 }
 
+.carousel-control-next::after {
+  content: url("/assets/images/carousel_next-icon.svg") !important;
+  .carousel-control-next-icon{
+    background-image: none;
+  }
+}
+
+.carousel-control-prev::after {
+  content: url("/assets/images/prev.svg") !important;
+  .carousel-control-prev-icon{
+    background-image: none;
+  }
+}
+
+
 p{
   margin-bottom: 0px !important;
 }

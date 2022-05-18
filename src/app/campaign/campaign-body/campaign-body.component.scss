@@ -8,4 +8,59 @@
   img{
     max-width: 658px;
   }
+
+  .script-content{
+    max-width: 658px;
+    margin-right: auto;
+    margin-left: auto;
+    .header{
+      margin-bottom: 25px;
+      p{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #1C1D21;
+      }
+    }
+    .first-section{
+      p{
+        font-size: 14px;
+        line-height: 25px;
+        letter-spacing: 0.03em;
+        color: #000000;
+
+        span{
+          color: #5E81F4;
+        }
+      }
+    }
+    .second-section{
+      margin-top: 30px;
+      display: flex;
+      gap: 7px;
+      flex-direction: column;
+
+      .item{
+        border: 1px solid #ECEEF5;
+        border-radius: 8px;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.03em;
+        color: #000000;
+        padding: 7px 18px;
+        span{
+          font-size: 14px;
+          line-height: 25px;
+          letter-spacing: 0.03em;
+          color: #5E81F4;
+          &.serial{
+            color: #000000;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+          }
+        }
+      }
+    }
+  }
 }

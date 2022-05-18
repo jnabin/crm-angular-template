@@ -1,0 +1,23 @@
+.footer{
+  margin-top: 30px;
+  text-align: center;
+  padding: 0px 190px;
+  button{
+    width: 100%;
+    background: #5E81F4;
+    border: 1px solid #5E81F4;
+    border-radius: 12px;
+    box-shadow: 0px 1px 11px rgba(0, 0, 0, 0.18);
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.0224em;
+    color: #F5F5FA;
+    padding: 25px 0;
+
+    span{
+      margin-right: 15px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+  }
+}

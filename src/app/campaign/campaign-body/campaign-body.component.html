@@ -6,13 +6,35 @@
       </div>
     </ng-template>
     <ng-template ngbSlide>
-      <div class="picsum-img-wrapper text-center">
-        <img src="/assets/images/campaign-feature.png" alt="Random second slide">
-      </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper text-center">
-        <img src="/assets/images/campaign-feature.png" alt="Random third slide">
+      <div class="script-content">
+        <div class="header">
+          <p>Script</p>
+        </div>
+        <div class="first-section">
+          <p>
+            Hi this is <span>{{agentName}}</span>
+          </p>
+          <p class="mt-1">
+            from the <span>{{company}}</span>. I am reaching out
+          </p>
+          <p class="mt-1">
+            today with some important information about your Voting Options.
+          </p>
+        </div>
+        <div class="second-section">
+          <div class="item">
+            <span class="serial mr-2">1.</span>
+            Is <span>{{supporter}}</span> here ?
+          </div>
+          <div class="item">
+            <span class="serial mr-2">2.</span>
+            Is <span>{{supporter}}</span> mow ?
+          </div>
+          <div class="item">
+            <span class="serial mr-2">1.</span>
+            Yes <span>{{supporter}}</span> here ?
+          </div>
+        </div>
       </div>
     </ng-template>
   </ngb-carousel>
