@@ -44,6 +44,7 @@
         }
       }
       .step-content{
+        flex-grow: 1;
         .code-number{
           font-size: 40px;
           line-height: 48px;
@@ -113,7 +114,6 @@
 
 .f-btn{
   gap: 20px;
-  justify-content: space-between;
   button{
     width: 138px;
     height: 40px;
