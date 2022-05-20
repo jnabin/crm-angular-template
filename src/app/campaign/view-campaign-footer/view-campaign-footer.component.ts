@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-view-campaign-footer',
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ViewCampaignFooterComponent implements OnInit {
   loading: boolean = false;
   selectCallTime: boolean = false;
+  @Output() openOtp: EventEmitter<string> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -15,7 +17,15 @@ export class ViewCampaignFooterComponent implements OnInit {
 
   connect() {
     this.loading = true;
-    setTimeout(this.hide, 2000);
+    setTimeout(this.hide, 1000);
+  }
+
+  otpScreen(name: string) {
+    this.loading = true;
+    setTimeout(() => {
+      this.loading = false;
+      this.openOtp.emit(name);
+    }, 1000);
   }
 
   hide = () =>{

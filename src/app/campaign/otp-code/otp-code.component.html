@@ -1,0 +1,61 @@
+<div class="main-content">
+  <div class="back">
+    <button mat-button class="back-btn" (click)="back()">
+      <img src="/assets/images/arrow-left-icon.svg" alt="" srcset="">
+      <span>Go Back</span>
+    </button>
+  </div>
+  <div class="content">
+    <h3 class="title">
+      Get OTP code for <span>{{otpTitle}}</span>
+    </h3>
+    <div class="procedure">
+      <div class="d-flex">
+        <div class="number">
+          <span class="serial">1.</span>
+        </div>
+        <div class="step-content">
+          <div>
+            <p class="mute">Be called at this number</p>
+            <div class="d-flex call-number">
+              <div class="select">
+                <select class="code">
+                  <option>+1</option>
+                  <option>+2</option>
+                  <option>+3</option>
+                </select>
+              </div>
+              <div>
+                <strong>234 567 8901</strong>
+              </div>
+              <div>
+                <button class="submit" mat-button>Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex mt-30">
+        <div class="number">
+          <span class="serial">2.</span>
+        </div>
+        <div class="step-content">
+          <div>
+            <p class="mute">Enter this code when asked</p>
+            <div>
+              <p class="code-number">123 654</p>
+            </div>
+            <div class="d-flex mt-60 f-btn">
+              <div>
+                <button class="Quit" mat-button>Quit</button>
+              </div>
+              <div>
+                <button class="Next" mat-button>Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

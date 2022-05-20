@@ -1,0 +1,134 @@
+.main-content{
+  .back{
+    .back-btn{
+      img{
+        margin-right: 20px;
+      }
+      span{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #1C1D21;
+      }
+    }
+  }
+
+  .content{
+    max-width: 707px;
+    margin: 20px auto;
+
+    .title{
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: -0.0224em;
+      text-transform: capitalize;
+      color: #222831;
+    }
+
+    .procedure{
+      margin-top: 30px;
+      gap: 20px;
+      .d-flex{
+        gap: 18px;
+      }
+      .number{
+        .serial{
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: 0.04em;
+          text-transform: capitalize;
+          color: #222831;
+
+        }
+      }
+      .step-content{
+        .code-number{
+          font-size: 40px;
+          line-height: 48px;
+          letter-spacing: 0.3376em;
+          text-transform: capitalize;
+          color: #00ADB5;
+        }
+        .mute{
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 21px;
+          color: #8181A5;
+          margin-bottom: 25px !important;
+        }
+        .call-number{
+          justify-content: space-between;
+          gap: 20px;
+          padding-bottom: 3px;
+          border-bottom: 1px solid #D8D8D8;
+          .select{
+            border-right: 1px solid #D8D8D8;
+            padding-right: 10px;
+            .code{
+              border: none !important;
+              outline: none !important;
+              font-weight: 700;
+              font-size: 26px;
+              line-height: 31px;
+              letter-spacing: 0.04em;
+              text-transform: capitalize;
+              color: #222831;
+            }
+          }
+          strong{
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 31px;
+            letter-spacing: 0.04em;
+            text-transform: capitalize;
+            color: #222831;
+            padding-right: 10px;
+          }
+
+          .submit{
+            font-size: 14px;
+            line-height: 40px;
+            letter-spacing: 0.0164em;
+            color: #FFFFFF;
+            background: #5E81F4;
+            text-align: center;
+            border-radius: 8px;
+            width: 140px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mt-30{
+  margin-top: 30px;
+}
+.mt-60{
+  margin-top: 60px;
+}
+
+.f-btn{
+  gap: 20px;
+  justify-content: space-between;
+  button{
+    width: 138px;
+    height: 40px;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 0.0164em;
+    color: #FFFFFF;
+  }
+  .Quit{
+    background: #FF808B;
+  }
+  .Next{
+    background: #5E81F4;
+  }
+}

@@ -13,36 +13,44 @@
   </div>
   <ng-container *ngIf="selectCallTime">
     <div class="d-flex flex-wrap call-type">
-      <button mat-button class="select-btn" (click)="connect()">
-        <span class="dot align-self-center" [ngClass]="{'animation':loading}">
-          <span class="dot-pulse"></span>
-          <span class="dot-pulse"></span>
-          <span class="dot-pulse mr-3"></span>
-        </span>
-        <span class="text">
-          select call type
-        </span>
-        <span class="arrow">
-          <img src="/assets/images/right-arrow.svg" alt="" srcset="">
-        </span>
-      </button>
-      <button mat-button class="option">
-        <img src="/assets/images/done.svg" alt="" srcset="">
-        <br>
-        <span class="break">Web</span>
-        <br>
-          <span>Call</span>
-      </button>
-      <button mat-button class="option">
-        <img src="/assets/images/outbound-call.svg" alt="" srcset="">
-        <br>
-        <span>Outbound Call</span>
-      </button>
-      <button mat-button class="option">
-        <img src="/assets/images/in-bound-call.svg" alt="" srcset="">
-        <br>
-        <span>InBound Call</span>
-      </button>
+      <div class="align-self-center">
+        <button mat-button class="select-btn">
+          <span class="dot align-self-center" [ngClass]="{'animation':loading}">
+            <span class="dot-pulse"></span>
+            <span class="dot-pulse"></span>
+            <span class="dot-pulse mr-3"></span>
+          </span>
+          <span class="text">
+            select call type
+          </span>
+          <span class="arrow">
+            <img src="/assets/images/right-arrow.svg" alt="" srcset="">
+          </span>
+        </button>
+      </div>
+      <div>
+        <button mat-button class="option" (click)="otpScreen('Web Call')">
+          <img src="/assets/images/done.svg" alt="" srcset="">
+          <br>
+          <span class="break">Web</span>
+          <br>
+            <span>Call</span>
+        </button>
+      </div>
+      <div>
+        <button mat-button class="option" (click)="otpScreen('Outbound Call')">
+          <img src="/assets/images/outbound-call.svg" alt="" srcset="">
+          <br>
+          <span>Outbound Call</span>
+        </button>
+      </div>
+      <div>
+        <button mat-button class="option" (click)="otpScreen('InBound Call')">
+          <img src="/assets/images/in-bound-call.svg" alt="" srcset="">
+          <br>
+          <span>InBound Call</span>
+        </button>
+      </div>
     </div>
   </ng-container>
 </div>

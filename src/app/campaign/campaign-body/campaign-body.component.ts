@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-campaign-body',
@@ -9,6 +9,14 @@ export class CampaignBodyComponent implements OnInit {
   agentName: string = '[Agent_Name]';
   company: string = '[name of the department/company]';
   supporter: string = '[supporter_name]';
+  @Input() openOtpPage: boolean = false;
+  @Output() openOtpPageChange: EventEmitter<boolean> = new EventEmitter();
+  @Input() otpTitle: string = '';
+
+  closeOtp() {
+    this.openOtpPage = false;
+    this.openOtpPageChange.emit(false);
+  }
 
   constructor() { }
 

@@ -1,5 +1,5 @@
 <div class="main-content">
-  <ngb-carousel>
+  <ngb-carousel *ngIf="!openOtpPage">
     <ng-template ngbSlide>
       <div class="picsum-img-wrapper text-center">
         <img src="/assets/images/campaign-feature.png" alt="Random first slide">
@@ -38,4 +38,5 @@
       </div>
     </ng-template>
   </ngb-carousel>
+  <app-otp-code *ngIf="openOtpPage" (closeOtp)="closeOtp()" [otpTitle] = "otpTitle"></app-otp-code>
 </div>
