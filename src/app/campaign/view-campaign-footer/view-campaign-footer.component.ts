@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewCampaignFooterComponent implements OnInit {
   loading: boolean = false;
+  selectCallTime: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -18,7 +19,8 @@ export class ViewCampaignFooterComponent implements OnInit {
   }
 
   hide = () =>{
-    this.loading = false
+    this.loading = false;
+    this.selectCallTime = !this.selectCallTime;
   };
 
 }
