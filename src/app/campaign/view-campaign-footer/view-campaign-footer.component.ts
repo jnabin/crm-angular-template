@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-view-campaign-footer',
@@ -7,7 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class ViewCampaignFooterComponent implements OnInit {
   loading: boolean = false;
-  selectCallTime: boolean = false;
+  @Input() selectCallTime: boolean = false;
   @Output() openOtp: EventEmitter<string> = new EventEmitter();
 
   constructor() { }

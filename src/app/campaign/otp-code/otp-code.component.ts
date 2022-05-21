@@ -1,3 +1,4 @@
+import { ProgressBarService } from 'src/app/services/progress-bar.service';
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -8,14 +9,38 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 export class OtpCodeComponent implements OnInit {
   @Input() otpTitle: string = '';
   @Output() closeOtp: EventEmitter<void> = new EventEmitter();
+  @Output() quitOtp: EventEmitter<void> = new EventEmitter();
+  callInitiate: boolean = false;
+  connection: boolean = false;
+  hideCode: boolean = false;
 
-  constructor() { }
+  constructor(private progressBar: ProgressBarService) { }
 
   ngOnInit(): void {
   }
 
   back(){
     this.closeOtp.emit();
+  }
+
+  initiateCall() {
+    this.progressBar.show();
+    setTimeout(() => {
+      this.progressBar.hide();
+      this.callInitiate = true;
+      this.hideCode = true;
+      this.connection = false;
+    }, 2000);
+  }
+
+  connectionSuccess() {
+    this.hideCode = true;
+    this.callInitiate = false;
+    this.connection = true;
+  }
+
+  getIsHideOtp(): boolean {
+    return !this.callInitiate && !this.connection;
   }
 
 }

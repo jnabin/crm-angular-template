@@ -38,5 +38,12 @@
       </div>
     </ng-template>
   </ngb-carousel>
-  <app-otp-code *ngIf="openOtpPage" (closeOtp)="closeOtp()" [otpTitle] = "otpTitle"></app-otp-code>
+  <app-otp-code
+  *ngIf="openOtpPage"
+  (closeOtp)="closeOtp()"
+  [otpTitle] = "otpTitle"
+  (quitOtp)="quitOtp.emit()"
+  >
+
+  </app-otp-code>
 </div>

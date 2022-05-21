@@ -7,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CampaignComponent implements OnInit {
   openOtpPage: boolean = false;
+  selectCallTime: boolean = false;
   callType: string = '';
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changePage() {
+    this.openOtpPage = false;
+    this.selectCallTime = true;
   }
 
   openOtpCode(value: string){

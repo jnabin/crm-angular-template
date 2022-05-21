@@ -11,6 +11,7 @@ export class CampaignBodyComponent implements OnInit {
   supporter: string = '[supporter_name]';
   @Input() openOtpPage: boolean = false;
   @Output() openOtpPageChange: EventEmitter<boolean> = new EventEmitter();
+  @Output() quitOtp: EventEmitter<boolean> = new EventEmitter();
   @Input() otpTitle: string = '';
 
   closeOtp() {

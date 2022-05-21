@@ -2,10 +2,17 @@
   <div class="body-content">
     <app-campaign-view-header></app-campaign-view-header>
     <app-campaign-body
-    [(openOtpPage)] = "openOtpPage"
+    [openOtpPage] = "openOtpPage"
+    (openOtpPageChange)="changePage()"
+    (quitOtp)="this.openOtpPage = false;"
     [otpTitle]="callType"
     >
     </app-campaign-body>
-    <app-view-campaign-footer *ngIf="!openOtpPage" (openOtp)="openOtpCode($event)"></app-view-campaign-footer>
+    <app-view-campaign-footer
+    *ngIf="!openOtpPage"
+    (openOtp)="openOtpCode($event)"
+    [selectCallTime]="selectCallTime"
+    >
+    </app-view-campaign-footer>
   </div>
 </div>

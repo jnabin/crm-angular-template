@@ -8,6 +8,8 @@ import { ScriptUserDropdownComponent } from './script-user-dropdown/script-user-
 import { CampaignViewHeaderComponent } from './campaign-view-header/campaign-view-header.component';
 import { MatButtonModule } from '@angular/material/button';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoaderComponent } from './loader/loader.component';
+import { DotAnimationComponent } from './dot-animation/dot-animation.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AgentViewHeaderComponent,
     ColorBoxComponent,
     ScriptUserDropdownComponent,
-    CampaignViewHeaderComponent
+    CampaignViewHeaderComponent,
+    LoaderComponent,
+    DotAnimationComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +36,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PickerModule,
     ScriptUserDropdownComponent,
     CampaignViewHeaderComponent,
-    NgbModule
+    NgbModule,
+    DotAnimationComponent,
+    LoaderComponent
   ]
 })
 export class SharedModule { }

@@ -1,0 +1,23 @@
+.success{
+  img{
+    max-width: 500px;
+  }
+  p{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.0224em;
+    color: #222831;
+    margin-top: 20px;
+    &.con-success{
+      font-size: 26px;
+      line-height: 31px;
+    }
+
+    span{
+      color: #1B51E5;
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+}

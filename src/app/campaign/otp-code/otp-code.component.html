@@ -1,4 +1,4 @@
-<div class="main-content">
+<div *ngIf="!hideCode" class="main-content">
   <div class="back">
     <button mat-button class="back-btn" (click)="back()">
       <img src="/assets/images/arrow-left-icon.svg" alt="" srcset="">
@@ -47,10 +47,10 @@
             </div>
             <div class="d-flex mt-60 f-btn">
               <div>
-                <button class="Quit" mat-button>Quit</button>
+                <button class="Quit" mat-button (click)="quitOtp.emit()">Quit</button>
               </div>
               <div>
-                <button class="Next" mat-button>Next</button>
+                <button class="Next" mat-button (click)="initiateCall()">Next</button>
               </div>
             </div>
           </div>
@@ -59,3 +59,10 @@
     </div>
   </div>
 </div>
+<app-call-initiae
+*ngIf="callInitiate"
+[displayCallInitiate]="true"
+(connectionSuccess)="connectionSuccess()"
+>
+</app-call-initiae>
+<app-connection-success *ngIf="connection"></app-connection-success>

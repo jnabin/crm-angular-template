@@ -6,6 +6,8 @@ import { CampaignComponent } from './campaign/campaign.component';
 import { CampaignBodyComponent } from './campaign-body/campaign-body.component';
 import { ViewCampaignFooterComponent } from './view-campaign-footer/view-campaign-footer.component';
 import { OtpCodeComponent } from './otp-code/otp-code.component';
+import { CallInitiaeComponent } from './call-initiae/call-initiae.component';
+import { ConnectionSuccessComponent } from './connection-success/connection-success.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { OtpCodeComponent } from './otp-code/otp-code.component';
     CampaignComponent,
     CampaignBodyComponent,
     ViewCampaignFooterComponent,
-    OtpCodeComponent
+    OtpCodeComponent,
+    CallInitiaeComponent,
+    ConnectionSuccessComponent
   ],
   imports: [
     CampaignRoutingModule,
