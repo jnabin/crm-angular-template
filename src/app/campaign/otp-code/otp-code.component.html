@@ -65,4 +65,9 @@
 (connectionSuccess)="connectionSuccess()"
 >
 </app-call-initiae>
-<app-connection-success *ngIf="connection"></app-connection-success>
+<app-connection-success
+*ngIf="connection"
+[displaySuccess]="true"
+>
+
+</app-connection-success>

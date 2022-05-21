@@ -1,0 +1,109 @@
+.content{
+  min-height: 600px;
+}
+.progress-content{
+  .progress-title{
+    p{
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 31px;
+      letter-spacing: -0.0224em;
+      color: #222831;
+      margin-bottom: 15px !important;
+
+      span{
+        margin-left: 20px;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        letter-spacing: -0.0224em;
+        color: #1B51E5;
+      }
+    }
+  }
+}
+
+.progress-bar-blue{
+  background-color: #ECECF2;
+  height: 30px;
+  width: 100%;
+  border-radius: 30px;
+  position: relative;
+
+  .fill{
+    background: linear-gradient(144deg, rgba(255, 255, 255, 0.3) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 75%, transparent 75%, transparent);
+    border-radius: 30px;
+    animation: move 0.5s linear infinite;
+    background-size: 43px;
+  }
+
+  .a{
+    background-color: #5E81F4;
+    height: 100%;
+    transition: width 0.5s;
+  }
+}
+
+@keyframes move{
+  100%{
+    background-position: 40px 0px;
+  }
+}
+
+.feature-img{
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  img{
+    max-width: 640px;
+  }
+}
+
+.instruction{
+  margin-top: 50px;
+  .information{
+    .help-info{
+      .item{
+        padding: 18px 0 18px 45px;
+        span{
+          margin-left: 45px;
+          font-weight: 700;
+          font-size: 16.15px;
+          line-height: 44px;
+          color: #464A5F;
+        }
+      }
+    }
+    .call-info{
+      z-index: 20;
+      margin-top: 55px;
+      max-width: 469px;
+      text-align: center;
+      p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px;
+        color: #1B51E5;
+      }
+      .title{
+        margin-bottom: 5px !important;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: -0.0224em;
+        color: #1B51E5;
+
+        .red-dot{
+          margin-right: 10px;
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #EC3024;
+        }
+      }
+    }
+  }
+}
+

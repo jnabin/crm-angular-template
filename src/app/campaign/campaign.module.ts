@@ -8,6 +8,8 @@ import { ViewCampaignFooterComponent } from './view-campaign-footer/view-campaig
 import { OtpCodeComponent } from './otp-code/otp-code.component';
 import { CallInitiaeComponent } from './call-initiae/call-initiae.component';
 import { ConnectionSuccessComponent } from './connection-success/connection-success.component';
+import { ConnectionProgressComponent } from './connection-progress/connection-progress.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar'
 
 
 @NgModule({
@@ -17,11 +19,13 @@ import { ConnectionSuccessComponent } from './connection-success/connection-succ
     ViewCampaignFooterComponent,
     OtpCodeComponent,
     CallInitiaeComponent,
-    ConnectionSuccessComponent
+    ConnectionSuccessComponent,
+    ConnectionProgressComponent
   ],
   imports: [
     CampaignRoutingModule,
     MatButtonModule,
+    MatProgressBarModule,
     SharedModule
   ]
 })
