@@ -78,8 +78,8 @@
 }
 
 .dot-pulse {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   background-color: white;
   border-radius: 50%;
   display: inline-block;
@@ -89,8 +89,6 @@
 }
 .animation{
   span{
-    width: 10px;
-    height: 10px;
     animation-name: dots;
   }
 }
