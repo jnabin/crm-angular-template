@@ -10,6 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoaderComponent } from './loader/loader.component';
 import { DotAnimationComponent } from './dot-animation/dot-animation.component';
+import { MessengerComponent } from './messenger/messenger.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { DotAnimationComponent } from './dot-animation/dot-animation.component';
     ScriptUserDropdownComponent,
     CampaignViewHeaderComponent,
     LoaderComponent,
-    DotAnimationComponent
+    DotAnimationComponent,
+    MessengerComponent
   ],
   imports: [
     CommonModule,
@@ -38,7 +40,8 @@ import { DotAnimationComponent } from './dot-animation/dot-animation.component';
     CampaignViewHeaderComponent,
     NgbModule,
     DotAnimationComponent,
-    LoaderComponent
+    LoaderComponent,
+    MessengerComponent
   ]
 })
 export class SharedModule { }

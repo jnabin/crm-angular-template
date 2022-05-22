@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'agent-view',
+    redirectTo: 'campaign',
     pathMatch: 'full'
   },
   {
