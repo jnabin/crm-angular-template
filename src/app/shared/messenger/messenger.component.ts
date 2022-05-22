@@ -1,6 +1,6 @@
 import { Time } from '@angular/common';
 import { Component, OnInit, Input } from '@angular/core';
-import { Conversation, Message } from '../messenger-sidebar/messenger-sidebar.component';
+import { Conversation, Message } from 'src/app/model/conversation';
 
 @Component({
   selector: 'app-messenger',
