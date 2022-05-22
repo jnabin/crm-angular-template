@@ -1,13 +1,16 @@
+.top{
+  gap: 5px;
+}
 .dropdown{
   button{
     font-weight: 700;
-    font-size: 20px;
+    font-size: 19px;
     line-height: 32px;
     color: #1C1D21;
   }
 }
 .desc{
-  width: 550px;
+  width: 520px;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   padding: 10px 30px;

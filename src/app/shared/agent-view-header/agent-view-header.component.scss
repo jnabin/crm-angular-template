@@ -6,11 +6,13 @@
   .profile-img{
     border-bottom-right-radius: 10px;
   }
-
-  .abs-img{
-    position: absolute;
-    bottom: 0;
-    right: 0;
+  .pp-section{
+    padding: 3px;
+    .abs-img{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
   }
 
   strong{

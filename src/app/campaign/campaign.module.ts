@@ -9,7 +9,8 @@ import { OtpCodeComponent } from './otp-code/otp-code.component';
 import { CallInitiaeComponent } from './call-initiae/call-initiae.component';
 import { ConnectionSuccessComponent } from './connection-success/connection-success.component';
 import { ConnectionProgressComponent } from './connection-progress/connection-progress.component';
-import {MatProgressBarModule} from '@angular/material/progress-bar'
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { MessageComponent } from './message/message.component'
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar'
     OtpCodeComponent,
     CallInitiaeComponent,
     ConnectionSuccessComponent,
-    ConnectionProgressComponent
+    ConnectionProgressComponent,
+    MessageComponent
   ],
   imports: [
     CampaignRoutingModule,

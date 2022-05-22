@@ -1,8 +1,8 @@
-<div *ngIf="!script" class="d-flex justify-content-between flex-wrap">
-  <div class="mr-2">
+<div *ngIf="!script" class="top d-flex justify-content-between flex-wrap">
+  <div>
     <img src="/assets/images/back.svg" alt="" srcset="">
   </div>
-  <div class="dropdown mr-4">
+  <div class="dropdown">
     <button mat-button [matMenuTriggerFor]="menu">{{seletedMenu}} <img src="/assets/images/arrow-down.svg" alt="" srcset=""></button>
     <mat-menu #menu="matMenu">
       <button *ngFor="let item of persons" (click) = "seletedMenu = item" mat-menu-item>{{item}}</button>

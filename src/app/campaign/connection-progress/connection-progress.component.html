@@ -1,4 +1,4 @@
-<div class="position-relative content">
+<div *ngIf="!showmessage" class="position-relative content">
   <div class="progress-content position-relative">
     <div class="progress-title">
       <p>
@@ -27,7 +27,7 @@
           <img src="/assets/images/game.svg" alt="" srcset="">
           <span>Play a quick game</span>
         </p>
-        <p class="item">
+        <p class="item" (click)="showHelpChat()">
           <img src="/assets/images/chats.svg" alt="" srcset="">
           <span>Message and chats</span>
         </p>
@@ -47,4 +47,5 @@
     <img src="/assets/images/sammy-office.png" alt="" srcset="">
   </div>
 </div>
+<app-message (back)="showmessage = false" *ngIf="showmessage"></app-message>
 

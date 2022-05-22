@@ -49,8 +49,22 @@ export class MessengerComponent implements OnInit {
     this.messages.push(
       {id: lastMessageId++, body: this.messageContent??'', image: this.imageUrl, time: this.getCurrentTime(), me: true }
     );
+    lastMessageId++;
+    setTimeout(() => {
+      this.messages.push(
+        {id: lastMessageId++, body: 'I am seeing your message!', image: '', time: this.getCurrentTime(), me: false }
+      );
+      this.playSound();
+    }, 1500);
     this.messageContent = '';
     this.imageUrl = null;
+  }
+
+  playSound() {
+    let audio = new Audio();
+    audio.src = "../../assets/audio/notification_bell.mp3";
+    audio.load();
+    audio.play();
   }
 
 

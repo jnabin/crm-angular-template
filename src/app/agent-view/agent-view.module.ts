@@ -11,7 +11,6 @@ import { GeneralDescriptionComponent } from './general-description/general-descr
 import { ChatComponent } from './chat/chat.component';
 import {MatIconModule} from '@angular/material/icon';
 import { ProfileInformationComponent } from './profile-information/profile-information.component';
-import { MessengerComponent } from '../shared/messenger/messenger.component';
 import { ScriptComponent } from './script/script.component';
 
 
