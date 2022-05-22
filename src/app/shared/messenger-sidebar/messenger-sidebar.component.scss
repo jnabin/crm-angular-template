@@ -1,0 +1,49 @@
+
+.chat-item{
+  gap: 20px;
+
+  &.selected{
+    background: linear-gradient(0deg, rgba(94, 129, 244, 0.1), rgba(94, 129, 244, 0.1)), #FFFFFF;
+  }
+  
+  .profile-pic{
+    position: relative;
+    padding: 3px;
+    .pp{
+      width: 53px;
+    }
+    .active{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  cursor: pointer;
+  border: 1px solid #ECECF2;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.mute{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #8181A5;
+}
+
+.latest-msg{
+  margin-top: 3px;
+}
+
+.star{
+  width: 25px;
+}
+
+p{
+  strong{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1C1D21;
+  }
+}

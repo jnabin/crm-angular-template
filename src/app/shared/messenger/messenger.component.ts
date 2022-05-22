@@ -1,13 +1,6 @@
 import { Time } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-
-interface Message {
-  id: number,
-  body: string,
-  image: any,
-  time: string,
-  me: boolean
-}
+import { Component, OnInit, Input } from '@angular/core';
+import { Conversation, Message } from '../messenger-sidebar/messenger-sidebar.component';
 
 @Component({
   selector: 'app-messenger',
@@ -15,9 +8,6 @@ interface Message {
   styleUrls: ['./messenger.component.scss']
 })
 export class MessengerComponent implements OnInit {
-  messageContent: string = '';
-  toggleEmojiPicker: boolean = false;
-  imageUrl: any;
   messages: Message[] = [
     {id: 1, body: 'Ever wondered how some graphic', image: '', time: '8.00 PM', me: false},
     {id: 2, body: 'Freelance Design Tricks',image: '', time: '8.20 PM', me: true},
@@ -27,6 +17,22 @@ export class MessengerComponent implements OnInit {
     {id: 4, body: 'Marketers advertisers usually focus their', image: '', time: '8.30 PM', me: false},
     {id: 5, body: 'Show can be a very effective method', image: '', time: '8.31 PM', me: true},
   ];
+  @Input() fromConversation: boolean = false;
+  @Input() conversation: Conversation = {
+    name: '',
+    messages: this.messages,
+    time: '',
+    latestMessage: '',
+    latestMessageRead: true,
+    status: true,
+    photo: '',
+    isSelected: false
+  };
+
+  messageContent: string = '';
+  toggleEmojiPicker: boolean = false;
+  imageUrl: any;
+
   constructor() { }
 
   getProfilePhoto(myself: boolean): string {
@@ -42,20 +48,25 @@ export class MessengerComponent implements OnInit {
   }
   sendMessage() {
     this.toggleEmojiPicker = false;
-    if(this.messageContent.length == 0 && this.imageUrl == null){
-      return;
-    }
-    let lastMessageId = Math.max(...this.messages.map(x => x.id));
-    this.messages.push(
+    if(this.messageContent.length == 0 && this.imageUrl == null) return;
+    let lastMessageId = Math.max(...this.conversation.messages.map(x => x.id));
+    this.conversation.messages.push(
       {id: lastMessageId++, body: this.messageContent??'', image: this.imageUrl, time: this.getCurrentTime(), me: true }
     );
-    lastMessageId++;
+    this.botReplay(lastMessageId++);
+    this.nullMessageContent();
+  }
+
+  botReplay(lastMessageId: number){
     setTimeout(() => {
-      this.messages.push(
+      this.conversation.messages.push(
         {id: lastMessageId++, body: 'I am seeing your message!', image: '', time: this.getCurrentTime(), me: false }
       );
       this.playSound();
     }, 1500);
+  }
+
+  nullMessageContent() {
     this.messageContent = '';
     this.imageUrl = null;
   }

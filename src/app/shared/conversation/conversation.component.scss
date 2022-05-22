@@ -1,0 +1,17 @@
+.conversation{
+  gap: 25px;
+  .sidebar{
+    flex-basis: 354px;
+  }
+
+  .chat{
+    flex-grow: 1;
+  }
+}
+
+.conversation-list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}

@@ -33,7 +33,7 @@ export class ConnectionProgressComponent implements OnInit, OnChanges {
         this.setGlobalCallConnectionProgress(false);
         this.router.navigate(['agent-view']);
       }
-    }, 1000);
+    }, 500);
   }
 
   ngOnInit(): void {

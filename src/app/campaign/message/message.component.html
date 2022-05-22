@@ -5,31 +5,7 @@
       <span>Message</span>
     </button>
   </div>
-  <div class="messenger d-flex">
-    <div class="sidebar">
-      <div *ngFor="let item of [1,2,3]" class="chat-item d-flex">
-        <div>
-          <img class="star" src="/assets/images/star.svg" alt="" srcset="">
-        </div>
-        <div>
-          <div class="profile-pic">
-            <img class="pp" src="/assets/images/chat-profile.svg" alt="" srcset="">
-            <img class="active" src="/assets/images/active-chat.svg" alt="" srcset="">
-          </div>
-        </div>
-        <div>
-          <p>
-            <strong>Helena Chavez</strong>
-            <span class="mute float-right">11:52AM</span>
-          </p>
-          <p class="mute latest-msg">
-            How To Write Better Advertising Copy Examples
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="chat">
-      <app-messenger></app-messenger>
-    </div>
+  <div class="messenger">
+    <app-conversation></app-conversation>
   </div>
 </div>

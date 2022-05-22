@@ -1,16 +1,16 @@
 <div class="messenger">
-  <div class="body">
-    <div class="message" [ngClass]="{me : message.me}" *ngFor="let message of messages; let i = index">
+  <div class="body" [ngClass]="{'white-bg': fromConversation}">
+    <div class="message" [ngClass]="{me : message.me}" *ngFor="let message of conversation.messages; let i = index">
       <div class="message-content">
         <div class="image align-self-center">
           <img [src]="getProfilePhoto(message.me)" alt="" srcset="">
         </div>
-        <div class="content">
+        <div class="content" [ngClass]="{'gray-content': fromConversation}">
           {{message.body}}
           <img *ngIf="message.image" [src]="message.image" alt="" srcset="">
         </div>
       </div>
-      <div class="time" [hidden] = "i < messages.length-1 && message.me == messages[i+1].me && message.time == messages[i+1].time">
+      <div class="time" [hidden] = "i < conversation.messages.length-1 && message.me == conversation.messages[i+1].me && message.time == conversation.messages[i+1].time">
         {{message.time}}
       </div>
     </div>

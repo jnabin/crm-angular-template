@@ -1,0 +1,15 @@
+<div class="conversation d-flex">
+  <div class="sidebar">
+    <div class="conversation-list">
+      <app-messenger-sidebar
+      *ngFor="let item of conversations"
+      [conversationItem]="item"
+      (click) = "conversationClicked(item)"
+      >
+      </app-messenger-sidebar>
+    </div>
+  </div>
+  <div class="chat">
+    <app-messenger [fromConversation]="true" [conversation]="conversation"></app-messenger>
+  </div>
+</div>

@@ -11,6 +11,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoaderComponent } from './loader/loader.component';
 import { DotAnimationComponent } from './dot-animation/dot-animation.component';
 import { MessengerComponent } from './messenger/messenger.component';
+import { MessengerSidebarComponent } from './messenger-sidebar/messenger-sidebar.component';
+import { ConversationComponent } from './conversation/conversation.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { MessengerComponent } from './messenger/messenger.component';
     CampaignViewHeaderComponent,
     LoaderComponent,
     DotAnimationComponent,
-    MessengerComponent
+    MessengerComponent,
+    MessengerSidebarComponent,
+    ConversationComponent
   ],
   imports: [
     CommonModule,
@@ -41,7 +45,9 @@ import { MessengerComponent } from './messenger/messenger.component';
     NgbModule,
     DotAnimationComponent,
     LoaderComponent,
-    MessengerComponent
+    MessengerComponent,
+    MessengerSidebarComponent,
+    ConversationComponent
   ]
 })
 export class SharedModule { }

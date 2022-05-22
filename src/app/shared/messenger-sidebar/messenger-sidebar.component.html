@@ -1,0 +1,25 @@
+<div class="conversation-list">
+  <div
+  class="chat-item d-flex"
+  [ngClass]="{'selected': conversationItem?.isSelected}"
+  >
+    <div>
+      <img class="star" src="/assets/images/star.svg" alt="" srcset="">
+    </div>
+    <div>
+      <div class="profile-pic">
+        <img class="pp" [src]="conversationItem?.photo" alt="" srcset="">
+        <img class="active" src="/assets/images/active-chat.svg" alt="" srcset="">
+      </div>
+    </div>
+    <div>
+      <p>
+        <strong>{{conversationItem?.name}}</strong>
+        <span class="mute float-right">{{conversationItem?.time}}</span>
+      </p>
+      <p class="mute latest-msg">
+        {{conversationItem?.latestMessage}}
+      </p>
+    </div>
+  </div>
+</div>
