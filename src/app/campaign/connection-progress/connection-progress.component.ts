@@ -9,7 +9,7 @@ import { CampaignService } from '../services/campaign.service';
 })
 export class ConnectionProgressComponent implements OnInit, OnChanges {
   @Input() displayProgress: boolean = false;
-  completionPercent: number = 0;
+  completionPercent: number = 1;
   n: number = 49;
   eta: number = 49;
   showmessage: boolean = false;
@@ -33,7 +33,7 @@ export class ConnectionProgressComponent implements OnInit, OnChanges {
         this.setGlobalCallConnectionProgress(false);
         this.router.navigate(['agent-view']);
       }
-    }, 500);
+    }, 1000);
   }
 
   ngOnInit(): void {

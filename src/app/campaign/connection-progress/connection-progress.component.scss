@@ -40,6 +40,8 @@
   .a{
     background-color: #5E81F4;
     height: 100%;
+    max-width: 100%;
+    min-width: 1%;
     -webkit-transition: width 1s ease-in-out;
     -moz-transition: width 1s ease-in-out;
     -o-transition: width 1s ease-in-out;
