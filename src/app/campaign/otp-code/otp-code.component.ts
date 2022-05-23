@@ -19,6 +19,14 @@ export class OtpCodeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  get isInbound(): boolean {
+    return this.otpTitle.toLowerCase() == 'inbound call';
+  }
+
+  get isOutbound(): boolean {
+    return this.otpTitle.toLowerCase() == 'outbound call';
+  }
+
   back(){
     this.closeOtp.emit();
   }

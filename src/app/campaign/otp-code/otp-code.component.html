@@ -16,8 +16,9 @@
         </div>
         <div class="step-content">
           <div>
-            <p class="mute">Be called at this number</p>
-            <div class="d-flex call-number">
+            <p *ngIf="!isOutbound" class="mute">Be called at this number</p>
+            <p *ngIf="isOutbound" class="mute">Call this Number</p>
+            <div class="d-flex call-number" [ngClass]="{'outbound': isOutbound}">
               <div class="select">
                 <select class="code">
                   <option>+1</option>
@@ -26,7 +27,7 @@
                 </select>
               </div>
               <div>
-                <strong>234 567 8901</strong>
+                <strong><span>+1</span> 234 567 8901</strong>
               </div>
               <div>
                 <button class="submit" mat-button>Submit</button>
