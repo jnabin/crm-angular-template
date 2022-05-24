@@ -14,7 +14,8 @@
     </p>
   </div>
   <div class="user-section mt-5">
-    <div *ngFor="let item of scriptPerson" (click) = "contactSelected.emit(item)" class="d-flex justify-content-between script-item">
+    <div *ngFor="let item of scriptPerson" class="d-flex justify-content-between script-item">
+      <div (click) = "contactSelected.emit(item)" class="clickAble"></div>
       <div class="d-flex item">
         <div class="image position-relative align-self-center">
           <img src="/assets/images/script-user.svg" alt="" srcset="">
