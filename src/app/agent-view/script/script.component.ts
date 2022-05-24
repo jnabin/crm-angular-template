@@ -8,6 +8,8 @@ import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angu
 })
 export class ScriptComponent implements OnInit {
   @Input() scriptPerson: string[] = [];
+  @Output() contactSelected: EventEmitter<string> = new EventEmitter();
+
   selected = 1;
   agentName: string = '[Agent_Name]';
   company: string = '[name of the department/company]';

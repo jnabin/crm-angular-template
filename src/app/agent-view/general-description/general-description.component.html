@@ -37,7 +37,7 @@
   </div>
 </div>
 <div class="tab mt-4">
-  <mat-tab-group (selectedTabChange)="scriptToggle($event)">
+  <mat-tab-group [(selectedIndex)]="selectedIndex" (selectedTabChange)="scriptToggle($event)">
     <mat-tab>
       <ng-template mat-tab-label>
         <img src="/assets/images/user.svg" alt="" srcset="">
@@ -63,13 +63,13 @@
       Content 3
     </mat-tab>
 
-    <mat-tab>
+    <mat-tab *ngIf="isShowScript">
       <ng-template mat-tab-label>
         <img src="/assets/images/script.svg" alt="" srcset="">
         Script
       </ng-template>
 
-      <app-script [scriptPerson] ="persons"></app-script>
+      <app-script (contactSelected)="changeTab($event)" [scriptPerson] ="persons"></app-script>
     </mat-tab>
   </mat-tab-group>
 </div>
