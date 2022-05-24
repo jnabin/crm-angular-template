@@ -24,7 +24,7 @@
     padding: 0 25px;
     .clickAble{
       position: absolute;
-      width: 100%;
+      width: calc(100% - 50px);
       height: 100%;
     }
     .item{
