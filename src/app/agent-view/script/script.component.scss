@@ -1,15 +1,51 @@
 .script-content{
   margin-top: 25px;
-
+  .title{
+    margin-bottom: 25px;
+    h3{
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      color: #1C1D21;
+    }
+  }
   .first-section{
     p{
       font-size: 14px;
       line-height: 25px;
       letter-spacing: 0.03em;
       color: #000000;
-
+      font-weight: 600;
       span{
         color: #5E81F4;
+      }
+    }
+  }
+
+  .option-section{
+    margin-top: 15px;
+    .option{
+      border: 1px solid #ECEEF5;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 5px;
+      p{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.03em;
+        color: #000000;
+        span{
+          color: #5E81F4;
+          &.serial{
+            margin-right: 8px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.03em;
+            color: #000000;
+          }
+        }
       }
     }
   }

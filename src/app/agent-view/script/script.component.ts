@@ -19,6 +19,10 @@ export class ScriptComponent implements OnInit {
 
   constructor() { }
 
+  get isShowScript(): boolean {
+    return this.scriptPerson.length > 1;
+  }
+
   ngOnInit(): void {
   }
 

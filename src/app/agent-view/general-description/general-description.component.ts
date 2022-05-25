@@ -1,5 +1,6 @@
 import { AgentViewService } from './../agent-view.service';
 import { AfterViewInit, ChangeDetectorRef, Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ProgressBarService } from 'src/app/services/progress-bar.service';
 
 @Component({
   selector: 'app-general-description',
@@ -13,13 +14,9 @@ export class GeneralDescriptionComponent implements OnInit {
   seletedMenu: string = 'Guy Russel';
   persons: string[] = ['Guy Russel', 'Floyd Russel', 'Marvin Russel', 'Theresa Russel'];
 
-  constructor() { }
+  constructor(private loader: ProgressBarService) { }
 
   ngOnInit(): void {
-  }
-
-  get isShowScript(): boolean {
-    return this.persons.length > 1;
   }
 
   scriptToggle(event: any) {
@@ -31,8 +28,12 @@ export class GeneralDescriptionComponent implements OnInit {
   }
 
   changeTab(value: string){
-    this.selectedIndex = 0;
-    this.seletedMenu = value;
+    this.loader.show();
+    setTimeout(() => {
+      this.loader.hide();
+      this.selectedIndex = 0;
+      this.seletedMenu = value;
+    }, 1000);
   }
 
 }
