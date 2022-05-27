@@ -30,7 +30,7 @@
         color: #000000;
 
         span{
-          color: #5E81F4;
+          color: var(--primary-hex-color);
         }
       }
     }
@@ -52,7 +52,7 @@
           font-size: 14px;
           line-height: 25px;
           letter-spacing: 0.03em;
-          color: #5E81F4;
+          color: var(--primary-hex-color);
           &.serial{
             color: #000000;
             font-weight: 700;

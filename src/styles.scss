@@ -4,16 +4,17 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 @import '~@ctrl/ngx-emoji-mart/picker';
+@import './assets/styles/variable';
 
 html, body { height: 100%; }
-body { margin: 0; font-family: 'Lato', sans-serif; background: linear-gradient(145.26deg, #5E81F4 36.59%, #1B51E5 78.99%);}
+body { margin: 0; font-family: 'Lato', sans-serif; background: linear-gradient(145.26deg, var(--primary-hex-color) 36.59%, #1B51E5 78.99%);}
 
 img{
   max-width: 100%;
 }
 
 .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
-  background-color: rgba(94, 129, 244, 1);
+  background-color: var(--primary-hex-color);
 }
 
 .carousel-control-next::after {

@@ -53,7 +53,7 @@
       letter-spacing: 0.0164em;
       text-transform: capitalize;
       font-feature-settings: 'ss02' on, 'salt' on;
-      color: #5E81F4;
+      color: var(--primary-hex-color);
       text-align: center;
     }
 
@@ -63,7 +63,7 @@
       text-align: center;
       letter-spacing: 0.0164em;
       text-transform: capitalize;
-      color: #5E81F4;
+      color: var(--primary-hex-color);
     }
 
     .line{
@@ -82,7 +82,7 @@
       letter-spacing: 0.0164em;
       text-transform: capitalize;
       font-feature-settings: 'ss02' on, 'salt' on;
-      color: #5E81F4;
+      color: var(--primary-hex-color);
     }
 
     span{
@@ -94,7 +94,7 @@
       letter-spacing: 0.0164em;
       text-transform: capitalize;
       font-feature-settings: 'ss02' on, 'salt' on;
-      color: #5E81F4;
+      color: var(--primary-hex-color);
 
       &.active-call{
         display: block;
@@ -115,7 +115,7 @@
         letter-spacing: 0.0164em;
         text-transform: capitalize;
         font-feature-settings: 'ss02' on, 'salt' on;
-        color: #5E81F4;
+        color: var(--primary-hex-color);
       }
     }
 

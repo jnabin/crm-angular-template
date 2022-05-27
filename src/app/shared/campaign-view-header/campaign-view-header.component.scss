@@ -103,7 +103,7 @@
   }
 
   .a{
-    background-color: #5E81F4;
+    background-color: var(--primary-color-code);
     height: 100%;
     -webkit-transition: width 1s ease-in-out;
     -moz-transition: width 1s ease-in-out;
