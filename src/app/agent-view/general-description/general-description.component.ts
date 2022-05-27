@@ -28,6 +28,7 @@ export class GeneralDescriptionComponent implements OnInit {
   }
 
   changeTab(value: string){
+    //document.documentElement.style.setProperty('--primary-hex-color', '#27AE60');
     this.loader.show();
     setTimeout(() => {
       this.loader.hide();

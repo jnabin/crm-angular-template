@@ -7,10 +7,21 @@
 @import './assets/styles/variable';
 
 html, body { height: 100%; }
-body { margin: 0; font-family: 'Lato', sans-serif; background: linear-gradient(145.26deg, var(--primary-hex-color) 36.59%, #1B51E5 78.99%);}
+body { margin: 0; font-family: 'Lato', sans-serif; background: var(--blue-bg);}
 
 img{
   max-width: 100%;
+}
+
+.dropdown{
+  button{
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 32px;
+    color: #1C1D21;
+    overflow-x: hidden !important;
+    white-space: pre-wrap !important;
+  }
 }
 
 .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {

@@ -1,4 +1,8 @@
 :root{
     --primary-color-code: 94, 129, 244;
-    --primary-hex-color: #5E81F4;
+    --primary-hex-color: var(--blue-hex-color);
+    --green-hex-color: #27AE60;
+    --blue-hex-color: #5E81F4;
+    --green-bg: linear-gradient(168.09deg, #9DCA49 -27.89%, #9DCA49 -23.05%, #9BCC4B -18.21%, #99CD4D -13.37%, #95D050 -8.53%, #91D354 -3.69%, #8CD659 1.15%, #86DA5E 5.98%, #7FDE64 10.82%, #78E26B 15.66%, #70E571 20.5%, #67E978 25.34%, #60EC7D 30.18%, #58EE82 35.02%, #52F086 39.85%, #4EF188 44.69%, #4DF189 49.53%);
+    --blue-bg: linear-gradient(145.26deg, #5E81F4 36.59%, #1B51E5 78.99%);
 }
